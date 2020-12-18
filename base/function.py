@@ -29,3 +29,18 @@ def person(name, age, **kw): # 关键字参数
 person('Jack', 24, city='Beijing', job='Engineer')
 person('Jack', 24, job='Engineer')
 person('Jack', 24)
+
+# 可以用变量指向函数
+f = abs
+print f(-10)
+
+# 函数名是变量
+def func():
+    print("func")
+func = 10
+#func()
+
+# 函数做参数
+def add(x, y, f):
+    return f(x) + f(y)
+print(add(10,-20, abs))
